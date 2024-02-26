@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -17,41 +17,43 @@ module.exports = {
       },
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px'
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1200px",
     },
-    colors:{ 
-      body: '#e5e5e5',
-      white: '#FFF',
+    colors: {
+      body: "#e5e5e5",
+      white: "#FFF",
       green: {
-        DEFAULT: '#539592',
-        hover: '#40807d'
+        DEFAULT: "#539592",
+        hover: "#40807d",
       },
       black: {
         DEFAULT: "#273029",
-        heavy: "#1b211c"
+        heavy: "#1b211c",
       },
       grey: "#888888",
       orange: {
-        DEFAULT: '#f2994a',
-        hover: '#da863c',
+        DEFAULT: "#f2994a",
+        hover: "#da863c",
       },
       outline: "#f1f1f1",
-      pink: '#ffa5a5'
+      pink: "#ffa5a5",
     },
     extend: {
       fontFamily: {
-        lora: ['var(--font-lora)', 'sans-serif'],
-        poppins: ['var(--font-poppins)', 'sans-serif']
+        lora: ["var(--font-lora)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
-      backgroundImage:{
-        
+      backgroundImage: {
+        hero: "url(/hero/bg.png)",
+        menu: "url(/menu/bg.png)",
+        reservation: "url(/reservation/bg.png)",
+        footer: "url(/footer/bg.png)",
       },
       boxShadow: {
-        primary: '40px 4px 40px 0 rgba(68, 68, 68, 0.25)',
-
+        primary: "40px 4px 40px 0 rgba(68, 68, 68, 0.25)",
       },
       keyframes: {
         "accordion-down": {
@@ -70,4 +72,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
