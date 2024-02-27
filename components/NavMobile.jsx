@@ -53,7 +53,41 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
           isOpen ? "right-0" : "-right-full"
         } bg-black fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
-        mobile nav
+        <div className="flex flex-col items-center justify-between h-full bg-pink/10">
+          {/* nav close btn */}
+          <div
+            onClick={() => setIsOpen(false)}
+            className="cursor-pointer text-4xl text-white absolute w-10 h-10 left-8 top-8 bg-green flex items-center justify-center "
+          >
+            <IoCloseOutline />
+          </div>
+          {/* logo */}
+          <Link href="/">
+            <Image src={"/logo.svg"} width={90} height={36} />
+          </Link>
+          {/* links */}
+          <div>
+            {" "}
+            {links.map((link, index) => {
+              return (
+                <ScrollLink
+                  key={index}
+                  to={link.path}
+                  offset={link.offset}
+                  smooth={false}
+                  className="flex"
+                >
+                  <div>{link.icon}</div>
+                  <div>{link.name}</div>
+                </ScrollLink>
+              );
+            })}
+          </div>
+          {/* btn */}
+          <ScrollLink to="reservation" smooth offset={-150}>
+            <Button variant="orange">Book a table</Button>
+          </ScrollLink>
+        </div>
       </aside>
     </div>
   );
