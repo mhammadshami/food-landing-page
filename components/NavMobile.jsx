@@ -53,7 +53,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
           isOpen ? "right-0" : "-right-full"
         } bg-black fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
-        <div className="flex flex-col items-center justify-between h-full bg-pink/10">
+        <div className="flex flex-col items-center justify-between h-full">
           {/* nav close btn */}
           <div
             onClick={() => setIsOpen(false)}
@@ -66,7 +66,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
             <Image src={"/logo.svg"} width={90} height={36} />
           </Link>
           {/* links */}
-          <div>
+          <div className="flex flex-col gap-y-8">
             {" "}
             {links.map((link, index) => {
               return (
@@ -75,10 +75,10 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
                   to={link.path}
                   offset={link.offset}
                   smooth={false}
-                  className="flex"
+                  className="flex items-center gap-x-3"
                 >
-                  <div>{link.icon}</div>
-                  <div>{link.name}</div>
+                  <div className={`${iconStyles}`}>{link.icon}</div>
+                  <div className={`${linkStyles}`}>{link.name}</div>
                 </ScrollLink>
               );
             })}
