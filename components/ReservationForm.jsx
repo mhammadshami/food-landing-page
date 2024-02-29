@@ -29,10 +29,10 @@ import {
 
 const ReservationForm = () => {
   const [date, setDate] = React.useState();
-  
+
   return (
-    <form>
-      <div>
+    <form className="flex flex-col gap-y-10 ">
+      <div className="grid gap-[30px]">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-[30px] ">
           <div>
             <Label htmlFor="firstname">first name</Label>
@@ -68,8 +68,28 @@ const ReservationForm = () => {
               </PopoverContent>
             </Popover>
           </div>
+          {/* select */}
+          <div>
+            <Label>person</Label>
+            <Select placeholder="How many people?">
+              <SelectTrigger className="w-full ">
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>People</SelectLabel>
+                  <SelectItem value="1">1</SelectItem>
+                  <SelectItem value="2">2</SelectItem>
+                  <SelectItem value="3">3</SelectItem>
+                  <SelectItem value="4">4</SelectItem>
+                  <SelectItem value="5">5</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       </div>
+      <Button className="uppercase w-full xl:mx-auto md:self-end">Book a table</Button>
     </form>
   );
 };
