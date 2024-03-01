@@ -13,20 +13,19 @@ const Header = () => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleScroll = () => {
-        // detect scroll
-        setActive(window?.scrollY > 100);
-      };
+    ////
+    const handleScroll = () => {
+      // detect scroll
+      setActive(window?.scrollY > 100);
+    };
 
-      // add event listener
+    // add event listener
       window?.addEventListener("scroll", handleScroll);
 
-      // clear event listener
-      return () => {
+    // clear event listener
+    return () => {
         window?.removeEventListener("scroll", handleScroll);
-      };
-    }
+    };
   }, []);
 
   return (
