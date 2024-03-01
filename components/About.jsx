@@ -52,6 +52,7 @@ const About = () => {
           height={771}
           about=""
           className="hidden xl:flex "
+          alt=""
         />
       </motion.div>
     </section>
