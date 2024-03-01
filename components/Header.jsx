@@ -13,18 +13,20 @@ const Header = () => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // detect scroll
-      setActive(window?.scrollY > 100);
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        // detect scroll
+        setActive(window?.scrollY > 100);
+      };
 
-    // add event listener
-    window?.addEventListener("scroll", handleScroll);
+      // add event listener
+      window?.addEventListener("scroll", handleScroll);
 
-    // clear event listener
-    return () => {
-      window?.removeEventListener("scroll", handleScroll);
-    };
+      // clear event listener
+      return () => {
+        window?.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
@@ -52,8 +54,10 @@ const Header = () => {
             </Button>
           </ScrollLink>
           {/* mobile nav */}
-          <NavMobile containerStyles="xl:hidden" iconStyles="text-3xl" 
-          linkStyles="uppercase "
+          <NavMobile
+            containerStyles="xl:hidden"
+            iconStyles="text-3xl"
+            linkStyles="uppercase "
           />
         </div>
       </div>
