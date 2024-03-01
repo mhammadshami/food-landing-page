@@ -99,7 +99,7 @@ const Footer = () => {
         {/* copyright text */}
         <div className="py-4 border-t border-white/10 ">
           <p className="text-white/60 text-center text-sm">
-            Copyright &copy; W'Food 2024{" "}
+            Copyright &copy; W&apos;Food 2024{" "}
           </p>
         </div>
       </div>

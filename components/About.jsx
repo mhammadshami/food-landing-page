@@ -21,7 +21,7 @@ const About = () => {
         }}
         className="xl:pl-[135px]"
       >
-        <h1 className="mb-9">Let's Talk About W'Food</h1>
+        <h1 className="mb-9">Let&apos;s Talk About W&apos;Food</h1>
         <p className="mb-8">
           Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt
           aliquam diam curae, pulvinar maecenas morbi arcu nisl himenaeos eu
