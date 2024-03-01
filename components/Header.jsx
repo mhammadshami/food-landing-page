@@ -15,15 +15,15 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // detect scroll
-      setActive(window.scrollY > 100);
+      setActive(window?.scrollY > 100);
     };
 
     // add event listener
-    window.addEventListener("scroll", handleScroll);
+    window?.addEventListener("scroll", handleScroll);
 
     // clear event listener
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

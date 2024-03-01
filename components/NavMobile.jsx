@@ -63,7 +63,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
           </div>
           {/* logo */}
           <Link href="/">
-            <Image src={"/logo.svg"} width={90} height={36} />
+            <Image src={"/logo.svg"} width={90} height={36} alt="" />
           </Link>
           {/* links */}
           <div className="flex flex-col gap-y-8">
